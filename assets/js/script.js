@@ -119,12 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const icon = themeToggle.querySelector('i');
     
-    // Check for saved user preference, if any, on load of the website
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+    // Check current theme state (set by head script) and update icon
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
         icon.classList.remove('fa-moon');
         icon.classList.add('fa-sun');
     }
