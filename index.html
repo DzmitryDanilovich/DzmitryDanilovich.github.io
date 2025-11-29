@@ -13,6 +13,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/logo 64.png" type="image/png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1Q7Z4VTQY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+
+        // Default to denied
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+        });
+
+        gtag('js', new Date());
+        gtag('config', 'G-Q1Q7Z4VTQY');
+    </script>
+
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme');
@@ -141,6 +158,17 @@
                     reserved.</span></p>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <p data-i18n="cookies.text">We use cookies to improve your experience and analyze site traffic.</p>
+            <div class="cookie-buttons">
+                <button id="reject-cookies" class="btn btn-secondary" data-i18n="cookies.reject">Reject</button>
+                <button id="accept-cookies" class="btn btn-primary" data-i18n="cookies.accept">Accept</button>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>

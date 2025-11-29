@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             footer: {
                 rights: "All rights reserved."
+            },
+            cookies: {
+                text: "We use cookies to improve your experience and analyze site traffic.",
+                accept: "Accept",
+                reject: "Reject"
             }
         },
         pl: {
@@ -67,6 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             footer: {
                 rights: "Wszelkie prawa zastrzeżone."
+            },
+            cookies: {
+                text: "Używamy plików cookie, aby poprawić jakość korzystania z serwisu i analizować ruch na stronie.",
+                accept: "Akceptuj",
+                reject: "Odrzuć"
             }
         }
     };
@@ -198,5 +208,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+    });
+
+    // Cookie Consent Logic
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesBtn = document.getElementById('accept-cookies');
+    const rejectCookiesBtn = document.getElementById('reject-cookies');
+
+    function updateGAConsent(granted) {
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'ad_storage': granted ? 'granted' : 'denied',
+                'analytics_storage': granted ? 'granted' : 'denied'
+            });
+        }
+    }
+
+    const savedConsent = localStorage.getItem('cookieConsent');
+
+    if (!savedConsent) {
+        // Show banner after a short delay
+        setTimeout(() => {
+            cookieBanner.classList.remove('hidden');
+        }, 1000);
+    } else if (savedConsent === 'granted' || savedConsent === 'true') {
+        updateGAConsent(true);
+    }
+
+    acceptCookiesBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'granted');
+        updateGAConsent(true);
+        cookieBanner.classList.add('hidden');
+    });
+
+    rejectCookiesBtn.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'denied');
+        updateGAConsent(false);
+        cookieBanner.classList.add('hidden');
     });
 });
