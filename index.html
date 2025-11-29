@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzmitry Danilovich - Professional Services</title>
+    <meta name="description"
+        content="Professional B2B services in Poland. Software development, consulting, and technical solutions.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Dzmitry Danilovich</a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="divider">|</span>
+                    <button class="lang-btn" data-lang="pl">PL</button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1 data-i18n="hero.title">.NET/React Software Engineer</h1>
+                <p class="subtitle" data-i18n="hero.subtitle">Full-stack development, Team Leadership, and Cloud
+                    Solutions. Based in Warsaw,
+                    Poland.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-i18n="about.p1">
+                            I worked as a full stack ASP.NET/React developer most of the time. I have several years of
+                            experience of leading a team.
+                        </p>
+                        <p data-i18n="about.p2">
+                            As a solo entrepreneur (JDG) based in Warsaw, Poland, I specialize in delivering
+                            high-quality B2B
+                            services tailored to your specific needs. I focus on clear communication, timely delivery,
+                            and maintainable code.
+                        </p>
+                        <p data-i18n="about.p3">
+                            I actively leverage modern AI tools to enhance productivity and
+                            deliver robust solutions faster.
+                        </p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">.NET / ASP.NET</div>
+                        <div class="skill-item">React.js</div>
+                        <div class="skill-item">AWS Certified Developer</div>
+                        <div class="skill-item" data-i18n="skills.leadership">Team Leadership</div>
+                        <div class="skill-item">SQL</div>
+                        <div class="skill-item">TypeScript</div>
+                        <div class="skill-item" data-i18n="skills.ai">AI-Assisted Dev</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3 data-i18n="contact.subtitle">Let's Work Together</h3>
+                        <p data-i18n="contact.text">Open for B2B cooperation. Feel free to reach out to discuss your
+                            project.</p>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:dd221x0@gmail.com">dd221x0@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/dd221x0/" target="_blank"
+                                data-i18n="contact.linkedin">LinkedIn Profile</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/DzmitryDanilovich" target="_blank"
+                                data-i18n="contact.github">GitHub Profile</a>
+                        </div>
+                    </div>
+                    <div class="business-details">
+                        <h3 data-i18n="contact.business_details">Business Details</h3>
+                        <p><strong data-i18n="contact.company_name">Company Name:</strong> Dzmitry Danilovich</p>
+                        <p><strong>NIP (Tax ID):</strong> 5273013300</p>
+                        <p><strong>REGON:</strong> 522752730</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Dzmitry Danilovich. <span data-i18n="footer.rights">All rights
+                    reserved.</span></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
