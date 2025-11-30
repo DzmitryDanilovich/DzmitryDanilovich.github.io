@@ -98,8 +98,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: var(--text-color);
-    transition: color 0.5s ease;
 }
 
 h1 {
@@ -165,6 +163,7 @@ ul {
     background-color: var(--primary-color);
     margin: 10px auto 0;
     border-radius: 2px;
+    transition: background-color 0.5s ease;
 }
 
 /* Header */
@@ -174,8 +173,6 @@ ul {
     top: 0;
     z-index: 1000;
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
 }
 
 .header::before {
@@ -211,12 +208,10 @@ ul {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-color);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: color 0.5s ease;
     user-select: none;
     -webkit-user-select: none;
     cursor: default;
@@ -280,23 +275,25 @@ ul {
 .lang-btn {
     background: none;
     border: none;
-    color: var(--secondary-color);
+    color: inherit;
+    opacity: 0.8;
     font-weight: 600;
     cursor: pointer;
     font-size: 0.9rem;
     padding: 2px 5px;
-    transition: color 0.5s ease;
+    transition: none;
 }
 
 .lang-btn:hover,
 .lang-btn.active {
     color: var(--primary-color);
+    opacity: 1;
 }
 
 .divider {
-    color: var(--secondary-color);
+    color: inherit;
+    opacity: 0.8;
     font-size: 0.9rem;
-    transition: color 0.5s ease;
 }
 
 /* Hero Section */
@@ -314,9 +311,9 @@ ul {
 
 .subtitle {
     font-size: 1.25rem;
-    color: var(--secondary-color);
+    color: inherit;
+    opacity: 0.8;
     margin-bottom: 2rem;
-    transition: color 0.5s ease;
 }
 
 /* Buttons */
@@ -476,7 +473,6 @@ ul {
 .cookie-content p {
     margin: 0;
     font-size: 0.9rem;
-    color: var(--text-color);
     flex: 1;
 }
 
@@ -487,14 +483,15 @@ ul {
 
 .cookie-banner .btn-secondary {
     background-color: transparent;
-    border: 1px solid var(--text-color);
-    color: var(--text-color);
+    border: 1px solid currentColor;
+    color: inherit;
     margin-left: 0;
+    transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .cookie-banner .btn-secondary:hover {
     background-color: var(--bg-light);
-    color: var(--text-color);
+    color: inherit;
 }
 
 /* Responsive */
