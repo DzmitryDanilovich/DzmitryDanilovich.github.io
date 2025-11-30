@@ -31,6 +31,7 @@
 
 html {
     scroll-behavior: smooth;
+    overscroll-behavior-y: none;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.5s ease, color 0.5s ease;
+    overscroll-behavior-y: none;
 }
 
 /* Typography */
