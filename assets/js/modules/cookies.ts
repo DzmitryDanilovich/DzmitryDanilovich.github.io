@@ -1,4 +1,10 @@
+declare const gtag: any;
+
 export class CookieManager {
+    private banner: HTMLElement | null;
+    private acceptBtn: HTMLElement | null;
+    private rejectBtn: HTMLElement | null;
+
     constructor() {
         this.banner = document.getElementById('cookie-banner');
         this.acceptBtn = document.getElementById('accept-cookies');
@@ -12,7 +18,7 @@ export class CookieManager {
         const savedConsent = localStorage.getItem('cookieConsent');
 
         if (!savedConsent) {
-            setTimeout(() => this.banner.classList.remove('hidden'), 1000);
+            setTimeout(() => this.banner!.classList.remove('hidden'), 1000);
         } else if (savedConsent === 'granted') {
             this.updateGAConsent(true);
         }
@@ -21,13 +27,13 @@ export class CookieManager {
         this.rejectBtn.addEventListener('click', () => this.handleConsent(false));
     }
 
-    handleConsent(granted) {
+    handleConsent(granted: boolean) {
         localStorage.setItem('cookieConsent', granted ? 'granted' : 'denied');
         this.updateGAConsent(granted);
-        this.banner.classList.add('hidden');
+        this.banner!.classList.add('hidden');
     }
 
-    updateGAConsent(granted) {
+    updateGAConsent(granted: boolean) {
         if (typeof gtag === 'function') {
             gtag('consent', 'update', {
                 'ad_storage': granted ? 'granted' : 'denied',

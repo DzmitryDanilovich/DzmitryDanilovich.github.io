@@ -1,4 +1,6 @@
 export class ParallaxManager {
+    private container: HTMLElement | null;
+
     constructor() {
         this.container = document.querySelector('.parallax-container');
         this.init();
@@ -13,6 +15,7 @@ export class ParallaxManager {
     }
 
     update() {
+        if (!this.container) return;
         const scrolled = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.body.scrollHeight;

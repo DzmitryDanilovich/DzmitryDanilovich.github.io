@@ -1,4 +1,7 @@
 export class FooterManager {
+    private footer: HTMLElement | null;
+    private body: HTMLElement;
+
     constructor() {
         this.footer = document.querySelector('.footer');
         this.body = document.body;
@@ -29,6 +32,7 @@ export class FooterManager {
     }
 
     resize() {
+        if (!this.footer) return;
         // Add padding to body to prevent content from being hidden behind footer
         // We add a bit extra space (20px) for aesthetics
         const footerHeight = this.footer.offsetHeight;
@@ -37,6 +41,7 @@ export class FooterManager {
     }
 
     update() {
+        if (!this.footer) return;
         const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
@@ -48,9 +53,21 @@ export class FooterManager {
 
         // We want the footer to appear as if it's at the bottom of the document.
         // So we push it down by 'distanceToBottom'.
-        // But we clamp it at 0, so it never moves UP past the bottom of the screen (handling overscroll).
+        // However, we only want to push it down (positive translateY), never pull it up (negative translateY)
+        // relative to its fixed position at bottom:0.
+        
+        // When distanceToBottom > 0 (we are above the bottom), we push the footer down so it's hidden or lower.
+        // When distanceToBottom <= 0 (we are at bottom or overscrolling), we want it to stick to bottom (translateY = 0).
+        // Actually, if we want it to be revealed as we scroll, we might want a different logic.
+        // But based on "reveal" effect:
+        // The footer is fixed at bottom.
+        // We want it to be covered by the content.
+        // So we usually use z-index -1 on footer and margin-bottom on body.
+        // But here the logic seems to be manual translation.
+        
+        // Let's stick to the existing logic translation:
         const translateY = Math.max(0, distanceToBottom);
-
+        
         this.footer.style.transform = `translateY(${translateY}px)`;
     }
 }

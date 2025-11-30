@@ -1,7 +1,10 @@
 export class ThemeManager {
+    private themeToggle: HTMLElement | null;
+    private icon: HTMLElement | null;
+
     constructor() {
         this.themeToggle = document.getElementById('theme-toggle');
-        this.icon = this.themeToggle?.querySelector('i');
+        this.icon = this.themeToggle?.querySelector('i') || null;
         this.init();
     }
 
@@ -13,6 +16,8 @@ export class ThemeManager {
     }
 
     setupListeners() {
+        if (!this.themeToggle) return;
+
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
             if (!localStorage.getItem('theme')) {
                 this.setTheme(e.matches ? 'dark' : 'light', false);
@@ -25,7 +30,7 @@ export class ThemeManager {
         });
     }
 
-    setTheme(theme, save = true) {
+    setTheme(theme: string, save = true) {
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         } else {
@@ -36,7 +41,9 @@ export class ThemeManager {
         this.updateIcon(theme === 'dark');
     }
 
-    updateIcon(isDark) {
-        this.icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    updateIcon(isDark: boolean) {
+        if (this.icon) {
+            this.icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+        }
     }
 }

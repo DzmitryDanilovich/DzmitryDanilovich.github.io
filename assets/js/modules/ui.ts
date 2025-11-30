@@ -31,7 +31,7 @@ export class UIManager {
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = anchor.getAttribute('href');
-                if (targetId === '#') return;
+                if (targetId === '#' || !targetId) return;
 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
@@ -51,7 +51,7 @@ export class UIManager {
     updateCopyrightYear() {
         const yearSpan = document.getElementById('year');
         if (yearSpan) {
-            yearSpan.textContent = new Date().getFullYear();
+            yearSpan.textContent = new Date().getFullYear().toString();
         }
     }
 }
