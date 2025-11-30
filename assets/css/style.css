@@ -1,5 +1,4 @@
 :root {
-    /* Light Theme (Default) */
     --primary-color: #2563eb;
     --primary-dark: #1d4ed8;
     --secondary-color: #64748b;
@@ -10,11 +9,10 @@
     --white: #ffffff;
     --max-width: 1200px;
     --transition: all 0.5s ease;
-    --section-bg: rgba(255, 255, 255, 0.7); /* More transparent */
+    --section-bg: rgba(255, 255, 255, 0.7);
 }
 
 [data-theme="dark"] {
-    /* Dark Theme */
     --primary-color: #e91e63;
     --primary-dark: #c2185b;
     --secondary-color: #a0a0a0;
@@ -22,7 +20,7 @@
     --bg-color: #121212;
     --bg-light: #1e1e1e;
     --surface-color: #1e1e1e;
-    --section-bg: rgba(30, 30, 30, 0.7); /* More transparent */
+    --section-bg: rgba(30, 30, 30, 0.7);
 }
 
 * {
@@ -36,8 +34,8 @@ html {
     overscroll-behavior-y: none;
     height: 100%;
     background-color: transparent;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    -webkit-text-size-adjust: 100%; /* Prevent auto-scaling of fonts on mobile */
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -51,12 +49,13 @@ body {
     position: relative;
 }
 
+/* Parallax Background */
 .parallax-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 120vh; /* Taller than viewport to allow movement */
+    height: 120vh;
     z-index: -1;
     will-change: transform;
 }
@@ -165,7 +164,6 @@ ul {
 
 /* Header */
 .header {
-    /* background-color: var(--surface-color); Removed to use pseudo-element for z-index control */
     position: fixed;
     width: 100%;
     top: 0;
@@ -304,41 +302,6 @@ ul {
     z-index: 1;
 }
 
-.hero::before,
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: opacity 0.5s ease;
-}
-
-/* Light Theme Gradient */
-.hero::before {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    opacity: 0.8; /* Reduced opacity to show parallax background */
-    display: none; /* Hide gradient to show background image */
-}
-
-/* Dark Theme Gradient */
-.hero::after {
-    background: linear-gradient(135deg, #1a1a1a 0%, #0f172a 100%);
-    opacity: 0;
-    display: none; /* Hide gradient to show background image */
-}
-
-[data-theme="dark"] .hero::before {
-    opacity: 0;
-}
-
-[data-theme="dark"] .hero::after {
-    opacity: 0.8; /* Reduced opacity */
-    display: none; /* Hide gradient */
-}
-
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
@@ -436,15 +399,7 @@ ul {
     transition: color 0.5s ease;
 }
 
-.contact-info {
-    background-color: var(--section-bg);
-    backdrop-filter: blur(5px);
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-    transition: background-color 0.5s ease, border-color 0.5s ease;
-}
-
+.contact-info,
 .business-details {
     background-color: var(--section-bg);
     backdrop-filter: blur(5px);
@@ -534,6 +489,7 @@ ul {
     color: var(--text-color);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .logo {
         font-size: 1.1rem;
@@ -588,19 +544,19 @@ ul {
     }
 
     h1 {
-        font-size: 1.75rem; /* Reduced from 2rem */
+        font-size: 1.75rem;
     }
 
     h2 {
-        font-size: 1.5rem; /* Reduced from 2rem (desktop size) */
+        font-size: 1.5rem;
     }
 
     .subtitle {
-        font-size: 1rem; /* Reduced from 1.25rem */
+        font-size: 1rem;
     }
 
     .container {
-        padding: 0 15px; /* More space for content */
+        padding: 0 15px;
     }
 
     .cta-buttons {
@@ -611,11 +567,12 @@ ul {
     }
 
     .contact-wrapper {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr;
         gap: 30px;
     }
 
-    .contact-info, .business-details {
+    .contact-info,
+    .business-details {
         padding: 20px;
     }
 
@@ -633,7 +590,7 @@ ul {
         text-align: center;
         padding: 0 1rem;
     }
-    
+
     .cookie-buttons {
         width: 100%;
         justify-content: center;
