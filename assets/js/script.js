@@ -246,4 +246,39 @@ document.addEventListener('DOMContentLoaded', () => {
         updateGAConsent(false);
         cookieBanner.classList.add('hidden');
     });
+
+    // Parallax Effect
+    const parallaxContainer = document.querySelector('.parallax-container');
+    
+    if (parallaxContainer) {
+        const updateParallax = () => {
+            const scrolled = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.body.scrollHeight;
+            const containerHeight = parallaxContainer.offsetHeight;
+            
+            // Calculate the maximum scrollable distance of the page
+            const maxScroll = documentHeight - windowHeight;
+            
+            // Calculate the maximum distance the background can move
+            // (difference between container height and viewport height)
+            const maxTranslate = containerHeight - windowHeight;
+            
+            if (maxScroll > 0 && maxTranslate > 0) {
+                // Map the scroll position to the translation range
+                // As we scroll down (scrolled increases), we move the background up (negative translateY)
+                // When scrolled == maxScroll, translateY should be -maxTranslate
+                const translateValue = (scrolled / maxScroll) * maxTranslate;
+                
+                parallaxContainer.style.transform = `translateY(-${translateValue}px)`;
+            } else {
+                parallaxContainer.style.transform = 'translateY(0px)';
+            }
+        };
+
+        window.addEventListener('scroll', updateParallax);
+        window.addEventListener('resize', updateParallax);
+        // Initial call to set position
+        updateParallax();
+    }
 });
