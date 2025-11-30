@@ -17,7 +17,8 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "types": ["vite/client"]
   },
   "include": ["assets/js/**/*.ts", "assets/js/**/*.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
