@@ -442,17 +442,14 @@ ul {
 /* Cookie Banner */
 .cookie-banner {
     position: fixed;
-    bottom: 0;
+    bottom: -100px;
     left: 0;
-    width: 100%;
+    right: 0;
     background-color: var(--surface-color);
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom) + 100px);
     z-index: 1000;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    will-change: transform;
     visibility: visible;
     transition: transform 0.3s ease-in-out, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, visibility 0s;
     border-top: 1px solid var(--secondary-color);
