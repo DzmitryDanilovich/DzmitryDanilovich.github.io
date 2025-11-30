@@ -270,7 +270,7 @@ ul {
         background-color: var(--surface-color);
         width: 100%;
         text-align: center;
-        transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.5s ease;
+        transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.5s ease;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
         z-index: -2;
         padding-top: 20px;
@@ -556,14 +556,14 @@ ul {
     padding-bottom: calc(1rem + env(safe-area-inset-bottom) + 100px);
     z-index: 1000;
     visibility: visible;
-    transition: transform 0.3s ease-in-out, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, visibility 0s;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, visibility 0s;
     border-top: 1px solid var(--secondary-color);
 
     &.hidden {
         transform: translateY(100%);
         -webkit-transform: translateY(100%);
         visibility: hidden;
-        transition: transform 0.3s ease-in-out, visibility 0s 0.3s;
+        transition: transform 0.5s ease-in-out, visibility 0s 0.5s;
     }
 
     .cookie-content {
