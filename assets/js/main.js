@@ -3,6 +3,7 @@ import { ThemeManager } from './modules/theme.js';
 import { UIManager } from './modules/ui.js';
 import { CookieManager } from './modules/cookies.js';
 import { ParallaxManager } from './modules/parallax.js';
+import { FooterManager } from './modules/footer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     new I18nManager();
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
     new UIManager();
     new CookieManager();
     new ParallaxManager();
+    new FooterManager();
 });

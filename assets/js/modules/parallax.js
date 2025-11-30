@@ -22,7 +22,9 @@ export class ParallaxManager {
         const maxTranslate = containerHeight - windowHeight;
 
         if (maxScroll > 0 && maxTranslate > 0) {
-            const translateValue = (scrolled / maxScroll) * maxTranslate;
+            // Clamp scroll value to prevent background jumping during overscroll
+            const clampedScroll = Math.max(0, Math.min(scrolled, maxScroll));
+            const translateValue = (clampedScroll / maxScroll) * maxTranslate;
             this.container.style.transform = `translateY(-${translateValue}px)`;
         } else {
             this.container.style.transform = 'translateY(0px)';
