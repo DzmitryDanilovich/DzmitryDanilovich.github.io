@@ -4,6 +4,7 @@ export const translations = {
             home: "Home",
             about: "Profile",
             services: "Services",
+            techstack: "Tech Stack",
             contact: "Contact"
         },
         hero: {
@@ -80,6 +81,7 @@ export const translations = {
             home: "Start",
             about: "Profil",
             services: "Usługi",
+            techstack: "Technologie",
             contact: "Kontakt"
         },
         hero: {
