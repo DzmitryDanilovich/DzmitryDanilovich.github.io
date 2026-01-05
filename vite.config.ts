@@ -27,6 +27,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    minify: 'esbuild', // Vite uses esbuild by default, which is very fast
+    minify: 'esbuild',
   }
 });
