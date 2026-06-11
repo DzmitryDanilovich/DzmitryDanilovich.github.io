@@ -56,6 +56,7 @@ export const translations = {
             tooling: "Build & Tooling",
             devops: "DevOps & Cloud",
             ai: "AI & Productivity",
+            sdd: "Spec-Driven Development",
             ai_workflows: "AI-Assisted Workflows"
         },
         contact: {
@@ -133,6 +134,7 @@ export const translations = {
             tooling: "Build i Narzędzia",
             devops: "DevOps i Chmura",
             ai: "AI i Produktywność",
+            sdd: "Programowanie Sterowane Specyfikacją",
             ai_workflows: "Przepływy Pracy z AI"
         },
         contact: {

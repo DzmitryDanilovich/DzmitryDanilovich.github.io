@@ -698,6 +698,35 @@ ul {
     p {
         margin-bottom: 0;
     }
+
+    .personal-tag {
+        position: absolute;
+        right: 10px;
+        bottom: max(8px, env(safe-area-inset-bottom));
+        width: 16px;
+        height: 16px;
+        opacity: 0.35;
+        transition: opacity 0.5s ease;
+
+        .tag-triangle {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #bbbbbb;
+            clip-path: polygon(50% 13.397459621556166%, 100% 100%, 0% 100%);
+            transform-origin: 50% 71.13248654051871%;
+            transform: rotate(-45deg);
+            transition: transform 1s 0.02s ease;
+        }
+
+        &:hover {
+            opacity: 0.8;
+
+            .tag-triangle {
+                transform: rotate(135deg);
+            }
+        }
+    }
 }
 
 /* Cookie Banner */
