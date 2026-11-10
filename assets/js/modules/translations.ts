@@ -7,8 +7,8 @@ const en = {
         contact: "Contact"
     },
     hero: {
-        title: "Senior full-stack developer and tech lead for energy and industrial software",
-        subtitle: "For more than 10 years I have built large-scale .NET and React platforms: industrial safety, risk management and workforce management systems for global enterprise clients. Available for B2B contracts from Warsaw.",
+        title: "Senior full-stack developer and tech lead for large-scale enterprise platforms",
+        subtitle: "More than 10 years of building .NET and React platforms for global enterprise clients. As a frontend tech lead I run teams and technical strategy across complex monorepos and multiple SPAs. Available for B2B contracts from Warsaw.",
         cta: "Email me"
     },
     plate: {
@@ -17,8 +17,6 @@ const en = {
         experience_value: "10+ years",
         role: "Role",
         role_value: "Full-stack developer, frontend tech lead",
-        sectors: "Sectors",
-        sectors_value: "Energy, industry",
         stack: "Core stack",
         cert: "Certification",
         contract: "Contract",
@@ -36,7 +34,7 @@ const en = {
     proof: {
         title: "Check for yourself",
         aws: "AWS certification on Credly",
-        code: "teapot on GitHub: a Next.js app with unit tests, end-to-end tests and CI",
+        code: "Side project on GitHub: teapot (Next.js)",
         linkedin: "Career history on LinkedIn"
     },
     services: {
@@ -104,8 +102,8 @@ const pl: typeof en = {
         contact: "Kontakt"
     },
     hero: {
-        title: "Senior full-stack developer i tech lead w projektach dla energetyki i przemysłu",
-        subtitle: "Od ponad 10 lat buduję duże platformy w .NET i React: systemy bezpieczeństwa przemysłowego, zarządzania ryzykiem i zarządzania personelem dla globalnych klientów enterprise. Współpraca B2B z Warszawy.",
+        title: "Senior full-stack developer i tech lead dla dużych platform enterprise",
+        subtitle: "Ponad 10 lat budowania platform w .NET i React dla globalnych klientów enterprise. Jako tech lead frontendu prowadzę zespoły i strategię techniczną w złożonych monorepo i wielu aplikacjach SPA. Współpraca B2B z Warszawy.",
         cta: "Napisz do mnie"
     },
     plate: {
@@ -114,8 +112,6 @@ const pl: typeof en = {
         experience_value: "ponad 10 lat",
         role: "Rola",
         role_value: "Full-stack developer, tech lead frontendu",
-        sectors: "Branże",
-        sectors_value: "Energetyka, przemysł",
         stack: "Główny stack",
         cert: "Certyfikat",
         contract: "Współpraca",
@@ -133,7 +129,7 @@ const pl: typeof en = {
     proof: {
         title: "Do sprawdzenia",
         aws: "Certyfikat AWS w Credly",
-        code: "teapot na GitHubie: aplikacja Next.js z testami jednostkowymi, testami end-to-end i CI",
+        code: "Projekt poboczny na GitHubie: teapot (Next.js)",
         linkedin: "Historia zawodowa na LinkedIn"
     },
     services: {
