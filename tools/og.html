@@ -28,7 +28,7 @@
         .og-card .card {
             display: grid;
             grid-template-columns: minmax(0, 1fr) auto;
-            grid-template-rows: auto 1fr;
+            grid-template-rows: auto 1fr auto;
             column-gap: 56px;
             height: 630px;
             padding: 56px 64px;
@@ -46,7 +46,17 @@
 
         .og-card h1 {
             align-self: center;
-            font-size: 4.125rem;
+            font-size: 4.375rem;
+        }
+
+        /* One line of contact, the same size as the name: readable in a
+           LinkedIn-sized preview and useful when the image travels without its link. */
+        .og-card .card-contact {
+            max-width: none;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1;
         }
 
         /* The site's nameplate, scaled up as one piece */
@@ -67,7 +77,8 @@
             <img src="/assets/images/logo-clean.svg" alt="" width="56" height="56">
             <span>Dzmitry Danilovich</span>
         </div>
-        <h1>Senior full-stack developer and tech lead for large-scale enterprise platforms</h1>
+        <h1>Senior full-stack<br>developer and<br>tech lead</h1>
+        <p class="card-contact">contact@DzmitryDanilovich.dev</p>
         <aside class="plate">
             <dl class="spec spec-compact">
                 <div class="spec-row">

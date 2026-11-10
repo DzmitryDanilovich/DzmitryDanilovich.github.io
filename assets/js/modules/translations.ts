@@ -7,8 +7,8 @@ const en = {
         contact: "Contact"
     },
     hero: {
-        title: "Senior full-stack developer and tech lead for large-scale enterprise platforms",
-        subtitle: "More than 10 years of building .NET and React platforms for global enterprise clients. As a frontend tech lead I run teams and technical strategy across complex monorepos and multiple SPAs. Available for B2B contracts from Warsaw.",
+        title: "Senior full-\u2060stack developer and tech lead",
+        subtitle: "More than 10 years of building software with .NET and React, including large-scale platforms for global enterprise clients. As a frontend tech lead I run teams and technical strategy across complex monorepos and multiple SPAs. Available for B2B contracts from Warsaw.",
         cta: "Email me"
     },
     plate: {
@@ -20,7 +20,7 @@ const en = {
         stack: "Core stack",
         cert: "Certification",
         contract: "Contract",
-        contract_value: "B2B, long-term",
+        contract_value: "B2B",
         location: "Based in",
         location_value: "Warsaw, Poland",
         status: "Available for B2B contracts"
@@ -102,8 +102,8 @@ const pl: typeof en = {
         contact: "Kontakt"
     },
     hero: {
-        title: "Senior full-stack developer i tech lead dla dużych platform enterprise",
-        subtitle: "Ponad 10 lat budowania platform w .NET i React dla globalnych klientów enterprise. Jako tech lead frontendu prowadzę zespoły i strategię techniczną w złożonych monorepo i wielu aplikacjach SPA. Współpraca B2B z Warszawy.",
+        title: "Senior full-\u2060stack developer i tech lead",
+        subtitle: "Ponad 10 lat tworzenia oprogramowania w .NET i React, w tym dużych platform dla globalnych klientów enterprise. Jako tech lead frontendu prowadzę zespoły i strategię techniczną w złożonych monorepo i wielu aplikacjach SPA. Współpraca B2B z Warszawy.",
         cta: "Napisz do mnie"
     },
     plate: {
@@ -115,7 +115,7 @@ const pl: typeof en = {
         stack: "Główny stack",
         cert: "Certyfikat",
         contract: "Współpraca",
-        contract_value: "B2B, długoterminowa",
+        contract_value: "B2B",
         location: "Lokalizacja",
         location_value: "Warszawa, Polska",
         status: "Dostępny do współpracy B2B"

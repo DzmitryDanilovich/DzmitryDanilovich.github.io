@@ -105,7 +105,9 @@ h3 {
 }
 
 p {
-    max-width: 62ch;
+    /* About 65 characters a line. Not `ch`: this typeface's zero is wide,
+       so 62ch came out near 80 characters. */
+    max-width: 34em;
 }
 
 ul {
