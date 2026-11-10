@@ -1,148 +1,194 @@
-export const translations = {
-    en: {
-        nav: {
-            home: "Home",
-            about: "Profile",
-            services: "Services",
-            techstack: "Tech Stack",
-            contact: "Contact"
+const en = {
+    nav: {
+        skip: "Skip to content",
+        about: "Profile",
+        services: "Services",
+        techstack: "Tech Stack",
+        contact: "Contact"
+    },
+    hero: {
+        title: "Senior full-stack developer and tech lead for energy and industrial software",
+        subtitle: "For more than 10 years I have built large-scale .NET and React platforms: industrial safety, risk management and workforce management systems for global enterprise clients. Available for B2B contracts from Warsaw.",
+        cta: "Email me"
+    },
+    plate: {
+        title: "Key facts",
+        experience: "Experience",
+        experience_value: "10+ years",
+        role: "Role",
+        role_value: "Full-stack developer, frontend tech lead",
+        sectors: "Sectors",
+        sectors_value: "Energy, industry",
+        stack: "Core stack",
+        cert: "Certification",
+        contract: "Contract",
+        contract_value: "B2B, long-term",
+        location: "Based in",
+        location_value: "Warsaw, Poland",
+        status: "Available for B2B contracts"
+    },
+    about: {
+        title: "Professional Profile",
+        p1: "Full-stack .NET/React developer with more than 10 years of experience specializing in large-scale enterprise platforms. I provide Frontend Tech Lead services, managing development teams and driving technical strategy for complex monorepos and multiple SPAs.",
+        p2: "I specialize in mission-critical software for the energy and industrial sectors. My expertise centers on industrial safety, risk management, and workforce management systems, ensuring high reliability for global enterprise clients.",
+        p3: "Operating as a registered sole proprietorship in Warsaw, I offer B2B collaboration. I bring a blend of technical expertise and leadership skills: requirements analysis, team coordination, code reviews, onboarding, and process improvement."
+    },
+    proof: {
+        title: "Check for yourself",
+        aws: "AWS certification on Credly",
+        code: "teapot on GitHub: a Next.js app with unit tests, end-to-end tests and CI",
+        linkedin: "Career history on LinkedIn"
+    },
+    services: {
+        title: "Services",
+        fullstack: {
+            title: "Full-Stack Development",
+            desc: "End-to-end application development using .NET and React. From REST APIs and database design to responsive, modern frontends."
         },
-        hero: {
-            title: "Senior Full-Stack Developer & Tech Lead",
-            subtitle: "Building robust enterprise applications and providing technical leadership for complex, long-term products. Full-stack, full-cycle development services. B2B cooperation from Warsaw, Poland.",
-            cta: "Discuss Your Project"
+        leadership: {
+            title: "Technical Leadership",
+            desc: "Team coordination, requirements analysis with stakeholders, technical decision-making, code reviews, and mentoring developers."
         },
-        about: {
-            title: "Professional Profile",
-            p1: "Full-stack .NET/React developer with more than 10 years of experience specializing in large-scale enterprise platforms. I provide Frontend Tech Lead services, managing development teams and driving technical strategy for complex monorepos and multiple SPAs.",
-            p2: "I specialize in mission-critical software for the energy and industrial sectors. My expertise centers on industrial safety, risk management, and workforce management systems, ensuring high reliability for global enterprise clients.",
-            p3: "Operating as a registered sole proprietorship in Warsaw, I offer B2B collaboration. I bring a blend of technical expertise and leadership skills: requirements analysis, team coordination, code reviews, onboarding, and process improvement."
+        devops: {
+            title: "Build & DevOps",
+            desc: "CI/CD pipeline configuration, build optimization, migrations, and quality gates setup with SonarQube."
         },
-        services: {
-            title: "Services",
-            fullstack: {
-                title: "Full-Stack Development",
-                desc: "End-to-end application development using .NET and React. From REST APIs and database design to responsive, modern frontends."
-            },
-            leadership: {
-                title: "Technical Leadership",
-                desc: "Team coordination, requirements analysis with stakeholders, technical decision-making, code reviews, and mentoring developers."
-            },
-            devops: {
-                title: "Build & DevOps",
-                desc: "CI/CD pipeline configuration, build optimization, migrations, and quality gates setup with SonarQube."
-            },
-            augmentation: {
-                title: "Team Augmentation",
-                desc: "Seamless integration into existing teams. Long-term B2B contracts with full commitment to your product and processes."
-            },
-            consulting: {
-                title: "Technical Consulting",
-                desc: "Architecture reviews, technical investigations, process improvements, and knowledge sharing sessions for your team."
-            },
-            onboarding: {
-                title: "Onboarding & Knowledge Transfer",
-                desc: "Developer onboarding programs, documentation, and training sessions to accelerate team productivity."
-            },
-            ai: {
-                title: "AI-Augmented Development",
-                desc: "Leveraging AI coding assistants to boost productivity. Best practices for AI-assisted workflows."
-            }
+        augmentation: {
+            title: "Team Augmentation",
+            desc: "Seamless integration into existing teams. Long-term B2B contracts with full commitment to your product and processes."
         },
-        techstack: {
-            title: "Technology Stack",
-            backend: "Backend",
-            frontend: "Frontend",
-            tooling: "Build & Tooling",
-            devops: "DevOps & Cloud",
-            ai: "AI & Productivity",
-            sdd: "Spec-Driven Development",
-            ai_workflows: "AI-Assisted Workflows"
+        consulting: {
+            title: "Technical Consulting",
+            desc: "Architecture reviews, technical investigations, process improvements, and knowledge sharing sessions for your team."
         },
-        contact: {
-            title: "Contact",
-            subtitle: "B2B Cooperation",
-            text: "Available for long-term B2B contracts, team augmentation, and technical consulting. Let's discuss how I can contribute to your project.",
-            linkedin: "LinkedIn Profile",
-            github: "GitHub Profile",
-            business_details: "Business Details",
-            company_name: "Company Name:"
+        onboarding: {
+            title: "Onboarding & Knowledge Transfer",
+            desc: "Developer onboarding programs, documentation, and training sessions to accelerate team productivity."
         },
-        footer: {
-            rights: "All rights reserved."
+        ai: {
+            title: "AI-Augmented Development",
+            desc: "Leveraging AI coding assistants to boost productivity. Best practices for AI-assisted workflows."
         }
     },
-    pl: {
-        nav: {
-            home: "Start",
-            about: "Profil",
-            services: "Usługi",
-            techstack: "Technologie",
-            contact: "Kontakt"
-        },
-        hero: {
-            title: "Senior Full-Stack Developer & Tech Lead",
-            subtitle: "Tworzenie solidnych aplikacji enterprise i kierowanie techniczne dla złożonych, długoterminowych produktów. Usługi full-stack, full-cycle development. Współpraca B2B z Warszawy.",
-            cta: "Omów swój projekt"
-        },
-        about: {
-            title: "Profil Zawodowy",
-            p1: "Full-stack developer .NET/React z ponad 10-letnim doświadczeniem, specjalizujący się w dużych platformach enterprise. Oferuję usługi Tech Leada frontendu, zarządzanie zespołami deweloperskimi oraz kierowanie strategią techniczną dla złożonych monorepo i wielu aplikacji SPA.",
-            p2: "Specjalizuję się w krytycznym oprogramowaniu dla sektora energetycznego i przemysłowego. Moja ekspertyza koncentruje się na bezpieczeństwie przemysłowym, zarządzaniu ryzykiem oraz systemach zarządzania personelem, zapewniając wysoką niezawodność dla globalnych klientów.",
-            p3: "Prowadzę zarejestrowaną Jednoosobową Działalność Gospodarczą w Warszawie, oferując współpracę B2B. Wnoszę połączenie wiedzy technicznej i umiejętności liderskich: analizę wymagań, koordynację zespołu, code review, onboarding i usprawnianie procesów."
-        },
-        services: {
-            title: "Usługi",
-            fullstack: {
-                title: "Full-Stack Development",
-                desc: "Kompleksowe tworzenie aplikacji w .NET i React. Od REST API i projektowania baz danych po responsywne, nowoczesne frontendy."
-            },
-            leadership: {
-                title: "Kierowanie Techniczne",
-                desc: "Koordynacja zespołu, analiza wymagań z interesariuszami, podejmowanie decyzji technicznych, code review i mentoring developerów."
-            },
-            devops: {
-                title: "Build & DevOps",
-                desc: "Konfiguracja pipeline'ów CI/CD, optymalizacja buildów, migracje i konfiguracja bramek jakości z SonarQube."
-            },
-            augmentation: {
-                title: "Wzmocnienie Zespołu",
-                desc: "Płynna integracja z istniejącymi zespołami. Długoterminowe kontrakty B2B z pełnym zaangażowaniem w Twój produkt i procesy."
-            },
-            consulting: {
-                title: "Konsulting Techniczny",
-                desc: "Przeglądy architektury, badania techniczne, usprawnianie procesów i sesje dzielenia się wiedzą dla Twojego zespołu."
-            },
-            onboarding: {
-                title: "Onboarding i Transfer Wiedzy",
-                desc: "Programy wdrożeniowe dla developerów, dokumentacja i sesje szkoleniowe przyspieszające produktywność zespołu."
-            },
-            ai: {
-                title: "Rozwój Wspierany przez AI",
-                desc: "Wykorzystanie asystentów AI do zwiększenia produktywności. Najlepsze praktyki pracy z AI."
-            }
-        },
-        techstack: {
-            title: "Stack Technologiczny",
-            backend: "Backend",
-            frontend: "Frontend",
-            tooling: "Build i Narzędzia",
-            devops: "DevOps i Chmura",
-            ai: "AI i Produktywność",
-            sdd: "Programowanie Sterowane Specyfikacją",
-            ai_workflows: "Przepływy Pracy z AI"
-        },
-        contact: {
-            title: "Kontakt",
-            subtitle: "Współpraca B2B",
-            text: "Dostępny do długoterminowych kontraktów B2B, wzmocnienia zespołu i konsultacji technicznych. Porozmawiajmy o tym, jak mogę wesprzeć Twój projekt.",
-            linkedin: "Profil LinkedIn",
-            github: "Profil GitHub",
-            business_details: "Dane Firmowe",
-            company_name: "Nazwa Firmy:"
-        },
-        footer: {
-            rights: "Wszelkie prawa zastrzeżone."
-        }
+    techstack: {
+        title: "Technology Stack",
+        backend: "Backend",
+        frontend: "Frontend",
+        tooling: "Build & Tooling",
+        devops: "DevOps & Cloud",
+        ai: "AI & Productivity",
+        sdd: "Spec-Driven Development",
+        ai_workflows: "AI-Assisted Workflows"
+    },
+    contact: {
+        title: "Contact",
+        subtitle: "B2B Cooperation",
+        text: "Available for long-term B2B contracts, team augmentation, and technical consulting. Let's discuss how I can contribute to your project.",
+        linkedin: "LinkedIn Profile",
+        github: "GitHub Profile",
+        business_details: "Business Details",
+        company_name: "Company Name:"
+    },
+    footer: {
+        rights: "All rights reserved."
     }
 };
+
+// Polish must carry exactly the English key set; the compiler rejects a missing or extra key.
+const pl: typeof en = {
+    nav: {
+        skip: "Przejdź do treści",
+        about: "Profil",
+        services: "Usługi",
+        techstack: "Technologie",
+        contact: "Kontakt"
+    },
+    hero: {
+        title: "Senior full-stack developer i tech lead w projektach dla energetyki i przemysłu",
+        subtitle: "Od ponad 10 lat buduję duże platformy w .NET i React: systemy bezpieczeństwa przemysłowego, zarządzania ryzykiem i zarządzania personelem dla globalnych klientów enterprise. Współpraca B2B z Warszawy.",
+        cta: "Napisz do mnie"
+    },
+    plate: {
+        title: "Najważniejsze informacje",
+        experience: "Doświadczenie",
+        experience_value: "ponad 10 lat",
+        role: "Rola",
+        role_value: "Full-stack developer, tech lead frontendu",
+        sectors: "Branże",
+        sectors_value: "Energetyka, przemysł",
+        stack: "Główny stack",
+        cert: "Certyfikat",
+        contract: "Współpraca",
+        contract_value: "B2B, długoterminowa",
+        location: "Lokalizacja",
+        location_value: "Warszawa, Polska",
+        status: "Dostępny do współpracy B2B"
+    },
+    about: {
+        title: "Profil Zawodowy",
+        p1: "Full-stack developer .NET/React z ponad 10-letnim doświadczeniem, specjalizujący się w dużych platformach enterprise. Oferuję usługi Tech Leada frontendu, zarządzanie zespołami deweloperskimi oraz kierowanie strategią techniczną dla złożonych monorepo i wielu aplikacji SPA.",
+        p2: "Specjalizuję się w krytycznym oprogramowaniu dla sektora energetycznego i przemysłowego. Moja ekspertyza koncentruje się na bezpieczeństwie przemysłowym, zarządzaniu ryzykiem oraz systemach zarządzania personelem, zapewniając wysoką niezawodność dla globalnych klientów.",
+        p3: "Prowadzę zarejestrowaną Jednoosobową Działalność Gospodarczą w Warszawie, oferując współpracę B2B. Wnoszę połączenie wiedzy technicznej i umiejętności liderskich: analizę wymagań, koordynację zespołu, code review, onboarding i usprawnianie procesów."
+    },
+    proof: {
+        title: "Do sprawdzenia",
+        aws: "Certyfikat AWS w Credly",
+        code: "teapot na GitHubie: aplikacja Next.js z testami jednostkowymi, testami end-to-end i CI",
+        linkedin: "Historia zawodowa na LinkedIn"
+    },
+    services: {
+        title: "Usługi",
+        fullstack: {
+            title: "Full-Stack Development",
+            desc: "Kompleksowe tworzenie aplikacji w .NET i React. Od REST API i projektowania baz danych po responsywne, nowoczesne frontendy."
+        },
+        leadership: {
+            title: "Kierowanie Techniczne",
+            desc: "Koordynacja zespołu, analiza wymagań z interesariuszami, podejmowanie decyzji technicznych, code review i mentoring developerów."
+        },
+        devops: {
+            title: "Build & DevOps",
+            desc: "Konfiguracja pipeline'ów CI/CD, optymalizacja buildów, migracje i konfiguracja bramek jakości z SonarQube."
+        },
+        augmentation: {
+            title: "Wzmocnienie Zespołu",
+            desc: "Płynna integracja z istniejącymi zespołami. Długoterminowe kontrakty B2B z pełnym zaangażowaniem w Twój produkt i procesy."
+        },
+        consulting: {
+            title: "Konsulting Techniczny",
+            desc: "Przeglądy architektury, badania techniczne, usprawnianie procesów i sesje dzielenia się wiedzą dla Twojego zespołu."
+        },
+        onboarding: {
+            title: "Onboarding i Transfer Wiedzy",
+            desc: "Programy wdrożeniowe dla developerów, dokumentacja i sesje szkoleniowe przyspieszające produktywność zespołu."
+        },
+        ai: {
+            title: "Rozwój Wspierany przez AI",
+            desc: "Wykorzystanie asystentów AI do zwiększenia produktywności. Najlepsze praktyki pracy z AI."
+        }
+    },
+    techstack: {
+        title: "Stack Technologiczny",
+        backend: "Backend",
+        frontend: "Frontend",
+        tooling: "Build i Narzędzia",
+        devops: "DevOps i Chmura",
+        ai: "AI i Produktywność",
+        sdd: "Programowanie Sterowane Specyfikacją",
+        ai_workflows: "Przepływy Pracy z AI"
+    },
+    contact: {
+        title: "Kontakt",
+        subtitle: "Współpraca B2B",
+        text: "Dostępny do długoterminowych kontraktów B2B, wzmocnienia zespołu i konsultacji technicznych. Porozmawiajmy o tym, jak mogę wesprzeć Twój projekt.",
+        linkedin: "Profil LinkedIn",
+        github: "Profil GitHub",
+        business_details: "Dane Firmowe",
+        company_name: "Nazwa Firmy:"
+    },
+    footer: {
+        rights: "Wszelkie prawa zastrzeżone."
+    }
+};
+
+export const translations = { en, pl };

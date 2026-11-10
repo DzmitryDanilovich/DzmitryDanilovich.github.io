@@ -65,7 +65,7 @@ body {
     position: relative;
     min-height: 100vh;
     font-family: var(--font-text);
-    font-size: clamp(1.0625rem, 1rem + 0.2vw, 1.125rem);
+    font-size: clamp(1.0625rem, calc(1rem + 0.2vw), 1.125rem);
     line-height: 1.6;
     color: var(--ink);
     background-color: var(--bg);
@@ -84,8 +84,9 @@ h3 {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 1.5rem + 3.6vw, 4rem);
-    line-height: 1.02;
+    /* calc() keeps LESS from adding the rem and vw terms itself */
+    font-size: clamp(2rem, calc(1.2rem + 3.6vw), 4rem);
+    line-height: 1.04;
     letter-spacing: -0.01em;
     text-wrap: balance;
 }
@@ -503,6 +504,125 @@ a {
     align-items: center;
     gap: 16px 28px;
     margin-top: 32px;
+}
+
+.hero-grid {
+    display: grid;
+    gap: 40px;
+
+    @media (min-width: @bp-wide) {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        column-gap: 32px;
+        align-items: start;
+
+        > .hero-text {
+            grid-column: span 7;
+        }
+
+        > .plate {
+            grid-column: span 5;
+        }
+    }
+}
+
+/* The nameplate: the one outlined object on the page, modelled on an
+   equipment rating plate. The four corner holes show the page through. */
+.plate {
+    --spec-label: 6rem;
+    --spec-gap: 12px;
+    --hole-inset: 12px;
+    @hole: var(--bg) 0, var(--bg) 2.6px, var(--ink) 3.1px, var(--ink) 4.3px, transparent 4.8px;
+
+    padding: 18px 20px 20px;
+    background-color: var(--surface);
+    background-image:
+        radial-gradient(circle at var(--hole-inset) var(--hole-inset), @hole),
+        radial-gradient(circle at calc(100% - var(--hole-inset)) var(--hole-inset), @hole),
+        radial-gradient(circle at var(--hole-inset) calc(100% - var(--hole-inset)), @hole),
+        radial-gradient(circle at calc(100% - var(--hole-inset)) calc(100% - var(--hole-inset)), @hole);
+    border: 1.5px solid var(--ink);
+    border-radius: 10px;
+    transition: var(--theme-fade);
+
+    @media (min-width: 480px) {
+        --spec-label: 8.5rem;
+        --spec-gap: 16px;
+        --hole-inset: 14px;
+        padding: 20px 28px 24px;
+    }
+
+    .spec-row {
+        align-items: baseline;
+        column-gap: var(--spec-gap);
+        padding-block: 11px;
+    }
+
+    dt {
+        color: var(--muted);
+        font-size: 0.875rem;
+        letter-spacing: 0.01em;
+    }
+
+    dd {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    .status {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 4px;
+        padding-top: 16px;
+        border-top: 1.5px solid var(--ink);
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+
+    .lamp {
+        flex: none;
+        width: 10px;
+        height: 10px;
+        background-color: var(--signal);
+        border-radius: 50%;
+    }
+}
+
+/* The page's one motion moment: the hero settles in on load. */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-text > * {
+        animation: rise-in 0.4s ease-out both;
+    }
+
+    .hero-text > .lead {
+        animation-delay: 0.08s;
+    }
+
+    .hero-text > .actions {
+        animation-delay: 0.16s;
+    }
+
+    .plate .spec-row,
+    .plate .status {
+        animation: fade-in 0.3s ease-out both;
+        animation-delay: calc(0.25s + var(--i, 0) * 0.045s);
+    }
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
 }
 
 /* Section content */
