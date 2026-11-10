@@ -265,6 +265,38 @@ a {
     }
 }
 
+/* Long values: the label sits above the value until two columns fit */
+.spec-stack .spec-row {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 4px;
+
+    @media (min-width: 640px) {
+        grid-template-columns: var(--spec-label, 11rem) minmax(0, 1fr);
+    }
+}
+
+/* Short facts: small muted label, heavier value */
+.spec-compact {
+    .spec-row {
+        align-items: baseline;
+        column-gap: var(--spec-gap, 16px);
+        padding-block: 11px;
+    }
+
+    dt {
+        color: var(--muted);
+        font-size: 0.875rem;
+        letter-spacing: 0.01em;
+    }
+
+    dd {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+}
+
 /* Header */
 .header {
     position: fixed;
@@ -551,25 +583,6 @@ a {
         padding: 20px 28px 24px;
     }
 
-    .spec-row {
-        align-items: baseline;
-        column-gap: var(--spec-gap);
-        padding-block: 11px;
-    }
-
-    dt {
-        color: var(--muted);
-        font-size: 0.875rem;
-        letter-spacing: 0.01em;
-    }
-
-    dd {
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: 1.4;
-        overflow-wrap: anywhere;
-    }
-
     .status {
         display: flex;
         align-items: center;
@@ -626,20 +639,103 @@ a {
 }
 
 /* Section content */
-.section-title {
-    margin-bottom: 24px;
-
-    .section-grid > & {
-        margin-bottom: 0;
-    }
-}
-
 .section h3 {
     margin-bottom: 8px;
 }
 
 .section p + p {
     margin-top: 1rem;
+}
+
+/* Section-level spec sheets (services, tech stack) carry larger labels */
+.spec-stack dt {
+    font-size: 1.25rem;
+}
+
+/* Services: two lead offers, then the rest as a spec sheet */
+.featured {
+    display: grid;
+    gap: 32px;
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    + .spec {
+        --spec-label: 14rem;
+        margin-top: 40px;
+        border-top: 1px solid var(--rule);
+
+        dd {
+            color: var(--muted);
+        }
+    }
+}
+
+/* Profile: prose beside the things a visitor can check */
+.profile {
+    display: grid;
+    gap: 40px;
+
+    @media (min-width: 760px) {
+        grid-template-columns: minmax(0, 1fr) 15rem;
+        column-gap: 48px;
+    }
+}
+
+.proof {
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    img {
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin: 8px 0 16px;
+    }
+
+    ul {
+        display: grid;
+        gap: 12px;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+}
+
+/* Tech stack: comma-separated lines, core items heavier */
+.inline-list li {
+    display: inline;
+
+    &:not(:last-child)::after {
+        content: ", ";
+        font-weight: 400;
+    }
+
+    &.core {
+        font-weight: 700;
+    }
+}
+
+/* Contact */
+.contact-grid {
+    display: grid;
+    gap: 40px;
+
+    @media (min-width: 760px) {
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        column-gap: 48px;
+    }
+}
+
+.email-link {
+    display: inline-block;
+    margin: 20px 0 8px;
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, calc(0.6rem + 3.4vw), 1.75rem);
+    font-weight: 600;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 .contact-item {
@@ -656,6 +752,10 @@ a {
     a {
         overflow-wrap: anywhere;
     }
+}
+
+.business {
+    --spec-label: 8rem;
 }
 
 /* Footer */

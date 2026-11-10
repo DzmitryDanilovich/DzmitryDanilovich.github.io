@@ -81,7 +81,7 @@
                 </div>
                 <aside class="plate" aria-labelledby="plate-title">
                     <h2 id="plate-title" class="visually-hidden" data-i18n="plate.title">Key facts</h2>
-                    <dl class="spec">
+                    <dl class="spec spec-compact">
                         <div class="spec-row" style="--i: 0">
                             <dt data-i18n="plate.experience">Experience</dt>
                             <dd data-i18n="plate.experience_value">10+ years</dd>
@@ -120,11 +120,58 @@
             </div>
         </section>
 
+        <section id="services" class="section">
+            <div class="container section-grid">
+                <h2 class="section-title" data-i18n="services.title">Services</h2>
+                <div class="section-body">
+                    <div class="featured">
+                        <article>
+                            <h3 data-i18n="services.fullstack.title">Full-Stack Development</h3>
+                            <p data-i18n="services.fullstack.desc">End-to-end application development using .NET and
+                                React. From REST APIs and database design to responsive, modern frontends.</p>
+                        </article>
+                        <article>
+                            <h3 data-i18n="services.leadership.title">Technical Leadership</h3>
+                            <p data-i18n="services.leadership.desc">Team coordination, requirements analysis with
+                                stakeholders, technical decision-making, code reviews, and mentoring developers.</p>
+                        </article>
+                    </div>
+                    <dl class="spec spec-stack">
+                        <div class="spec-row">
+                            <dt data-i18n="services.devops.title">Build &amp; DevOps</dt>
+                            <dd data-i18n="services.devops.desc">CI/CD pipeline configuration, build optimization,
+                                migrations, and quality gates setup with SonarQube.</dd>
+                        </div>
+                        <div class="spec-row">
+                            <dt data-i18n="services.augmentation.title">Team Augmentation</dt>
+                            <dd data-i18n="services.augmentation.desc">Seamless integration into existing teams.
+                                Long-term B2B contracts with full commitment to your product and processes.</dd>
+                        </div>
+                        <div class="spec-row">
+                            <dt data-i18n="services.consulting.title">Technical Consulting</dt>
+                            <dd data-i18n="services.consulting.desc">Architecture reviews, technical investigations,
+                                process improvements, and knowledge sharing sessions for your team.</dd>
+                        </div>
+                        <div class="spec-row">
+                            <dt data-i18n="services.onboarding.title">Onboarding &amp; Knowledge Transfer</dt>
+                            <dd data-i18n="services.onboarding.desc">Developer onboarding programs, documentation, and
+                                training sessions to accelerate team productivity.</dd>
+                        </div>
+                        <div class="spec-row">
+                            <dt data-i18n="services.ai.title">AI-Augmented Development</dt>
+                            <dd data-i18n="services.ai.desc">Leveraging AI coding assistants to boost productivity.
+                                Best practices for AI-assisted workflows.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="section">
-            <div class="container">
+            <div class="container section-grid">
                 <h2 class="section-title" data-i18n="about.title">Professional Profile</h2>
-                <div class="about-content">
-                    <div class="about-text">
+                <div class="section-body profile">
+                    <div class="prose">
                         <p data-i18n="about.p1">
                             Full-stack .NET/React developer with more than 10 years of experience specializing in
                             large-scale enterprise platforms. I provide Frontend Tech Lead services, managing
@@ -141,146 +188,121 @@
                             coordination, code reviews, onboarding, and process improvement.
                         </p>
                     </div>
-                    <div class="about-badge">
-                        <a href="https://www.credly.com/badges/9c1a0baa-0e7f-4d86-97f1-602ca0cb815d/public_url"
-                            target="_blank" rel="noopener">
-                            <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
-                                alt="AWS Certified Developer - Associate Badge" width="120" height="120"
-                                loading="lazy" decoding="async">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <h2 class="section-title" data-i18n="services.title">Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3 data-i18n="services.fullstack.title">Full-Stack Development</h3>
-                        <p data-i18n="services.fullstack.desc">End-to-end application development using .NET and React.
-                            From REST APIs and database design to responsive, modern frontends.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 data-i18n="services.leadership.title">Technical Leadership</h3>
-                        <p data-i18n="services.leadership.desc">Team coordination, requirements analysis with
-                            stakeholders, technical decision-making, code reviews, and mentoring developers.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 data-i18n="services.devops.title">Build &amp; DevOps</h3>
-                        <p data-i18n="services.devops.desc">CI/CD pipeline configuration, build optimization,
-                            migrations, and quality gates setup with SonarQube.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 data-i18n="services.augmentation.title">Team Augmentation</h3>
-                        <p data-i18n="services.augmentation.desc">Seamless integration into existing teams. Long-term
-                            B2B contracts with full commitment to your product and processes.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 data-i18n="services.consulting.title">Technical Consulting</h3>
-                        <p data-i18n="services.consulting.desc">Architecture reviews, technical investigations, process
-                            improvements, and knowledge sharing sessions for your team.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 data-i18n="services.onboarding.title">Onboarding &amp; Knowledge Transfer</h3>
-                        <p data-i18n="services.onboarding.desc">Developer onboarding programs, documentation, and
-                            training sessions to accelerate team productivity.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3 data-i18n="services.ai.title">AI-Augmented Development</h3>
-                        <p data-i18n="services.ai.desc">Leveraging AI coding assistants to boost productivity. Best
-                            practices for AI-assisted workflows.</p>
-                    </div>
+                    <aside class="proof">
+                        <h3 data-i18n="proof.title">Check for yourself</h3>
+                        <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
+                            alt="AWS Certified Developer - Associate Badge" width="120" height="120" loading="lazy"
+                            decoding="async">
+                        <ul>
+                            <li><a class="link"
+                                    href="https://www.credly.com/badges/9c1a0baa-0e7f-4d86-97f1-602ca0cb815d/public_url"
+                                    target="_blank" rel="noopener" data-i18n="proof.aws">AWS certification on
+                                    Credly</a></li>
+                            <li><a class="link" href="https://github.com/DzmitryDanilovich/teapot" target="_blank"
+                                    rel="noopener" data-i18n="proof.code">teapot on GitHub: a Next.js app with unit
+                                    tests, end-to-end tests and CI</a></li>
+                            <li><a class="link" href="https://linkedin.com/in/dd221x0/" target="_blank"
+                                    rel="noopener" data-i18n="proof.linkedin">Career history on LinkedIn</a></li>
+                        </ul>
+                    </aside>
                 </div>
             </div>
         </section>
 
         <section id="techstack" class="section">
-            <div class="container">
+            <div class="container section-grid">
                 <h2 class="section-title" data-i18n="techstack.title">Technology Stack</h2>
-                <div class="techstack-grid">
-                    <div class="techstack-category">
-                        <h3 data-i18n="techstack.backend">Backend</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">ASP.NET Core</span>
-                            <span class="tech-tag">Web API</span>
-                            <span class="tech-tag">Entity Framework</span>
-                            <span class="tech-tag">Dapper</span>
-                            <span class="tech-tag">CQRS</span>
-                            <span class="tech-tag">Event Sourcing</span>
-                            <span class="tech-tag">SQL Server</span>
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Prisma</span>
+                <div class="section-body">
+                    <dl class="spec spec-stack">
+                        <div class="spec-row">
+                            <dt data-i18n="techstack.backend">Backend</dt>
+                            <dd>
+                                <ul class="inline-list">
+                                    <li class="core">ASP.NET Core</li>
+                                    <li>Web API</li>
+                                    <li>Entity Framework</li>
+                                    <li>Dapper</li>
+                                    <li>CQRS</li>
+                                    <li>Event Sourcing</li>
+                                    <li>SQL Server</li>
+                                    <li>Next.js</li>
+                                    <li>Prisma</li>
+                                </ul>
+                            </dd>
                         </div>
-                    </div>
-                    <div class="techstack-category">
-                        <h3 data-i18n="techstack.frontend">Frontend</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">Redux / RTK</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">MUI</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">React Router</span>
-                            <span class="tech-tag">Zod</span>
-                            <span class="tech-tag">Jest</span>
-                            <span class="tech-tag">Vitest</span>
-                            <span class="tech-tag">Playwright</span>
+                        <div class="spec-row">
+                            <dt data-i18n="techstack.frontend">Frontend</dt>
+                            <dd>
+                                <ul class="inline-list">
+                                    <li class="core">React</li>
+                                    <li>Next.js</li>
+                                    <li>Redux / RTK</li>
+                                    <li class="core">TypeScript</li>
+                                    <li>MUI</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>React Router</li>
+                                    <li>Zod</li>
+                                    <li>Jest</li>
+                                    <li>Vitest</li>
+                                    <li>Playwright</li>
+                                </ul>
+                            </dd>
                         </div>
-                    </div>
-                    <div class="techstack-category">
-                        <h3 data-i18n="techstack.tooling">Build &amp; Tooling</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">RSBuild</span>
-                            <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">Webpack</span>
-                            <span class="tech-tag">pnpm</span>
-                            <span class="tech-tag">Yarn</span>
-                            <span class="tech-tag">Nuke</span>
-                            <span class="tech-tag">ESLint</span>
-                            <span class="tech-tag">Prettier</span>
-                            <span class="tech-tag">SonarQube</span>
+                        <div class="spec-row">
+                            <dt data-i18n="techstack.tooling">Build &amp; Tooling</dt>
+                            <dd>
+                                <ul class="inline-list">
+                                    <li>RSBuild</li>
+                                    <li>Vite</li>
+                                    <li>Webpack</li>
+                                    <li>pnpm</li>
+                                    <li>Yarn</li>
+                                    <li>Nuke</li>
+                                    <li>ESLint</li>
+                                    <li>Prettier</li>
+                                    <li>SonarQube</li>
+                                </ul>
+                            </dd>
                         </div>
-                    </div>
-                    <div class="techstack-category">
-                        <h3 data-i18n="techstack.devops">DevOps &amp; Cloud</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">TeamCity</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Sumo Logic</span>
+                        <div class="spec-row">
+                            <dt data-i18n="techstack.devops">DevOps &amp; Cloud</dt>
+                            <dd>
+                                <ul class="inline-list">
+                                    <li>GitHub Actions</li>
+                                    <li>TeamCity</li>
+                                    <li>AWS</li>
+                                    <li>Sumo Logic</li>
+                                </ul>
+                            </dd>
                         </div>
-                    </div>
-                    <div class="techstack-category">
-                        <h3 data-i18n="techstack.ai">AI &amp; Productivity</h3>
-                        <div class="tech-tags">
-                            <span class="tech-tag">GitHub Copilot</span>
-                            <span class="tech-tag">Codex</span>
-                            <span class="tech-tag">Claude</span>
-                            <span class="tech-tag">OpenSpec</span>
-                            <span class="tech-tag" data-i18n="techstack.sdd">Spec-Driven Development</span>
-                            <span class="tech-tag" data-i18n="techstack.ai_workflows">AI-Assisted Workflows</span>
+                        <div class="spec-row">
+                            <dt data-i18n="techstack.ai">AI &amp; Productivity</dt>
+                            <dd>
+                                <ul class="inline-list">
+                                    <li>GitHub Copilot</li>
+                                    <li>Codex</li>
+                                    <li>Claude</li>
+                                    <li>OpenSpec</li>
+                                    <li data-i18n="techstack.sdd">Spec-Driven Development</li>
+                                    <li data-i18n="techstack.ai_workflows">AI-Assisted Workflows</li>
+                                </ul>
+                            </dd>
                         </div>
-                    </div>
+                    </dl>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <div class="container">
+            <div class="container section-grid">
                 <h2 class="section-title" data-i18n="contact.title">Contact</h2>
-                <div class="contact-wrapper">
-                    <div class="contact-info">
+                <div class="section-body contact-grid">
+                    <div class="contact-main">
                         <h3 data-i18n="contact.subtitle">B2B Cooperation</h3>
                         <p data-i18n="contact.text">Available for long-term B2B contracts, team augmentation, and
                             technical consulting. Let's discuss how I can contribute to your project.</p>
-
-                        <div class="contact-item">
-                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc. --><path fill="currentColor" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/></svg>
-                            <a href="mailto:contact@DzmitryDanilovich.dev">contact@DzmitryDanilovich.dev</a>
-                        </div>
+                        <a class="email-link"
+                            href="mailto:contact@DzmitryDanilovich.dev">contact@DzmitryDanilovich.dev</a>
                         <div class="contact-item">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc. --><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"/></svg>
                             <a href="https://linkedin.com/in/dd221x0/" target="_blank" rel="noopener"
@@ -292,11 +314,22 @@
                                 data-i18n="contact.github">GitHub Profile</a>
                         </div>
                     </div>
-                    <div class="business-details">
+                    <div class="business">
                         <h3 data-i18n="contact.business_details">Business Details</h3>
-                        <p><strong data-i18n="contact.company_name">Company Name:</strong> Dzmitry Danilovich</p>
-                        <p><strong>NIP (Tax ID):</strong> 5273013300</p>
-                        <p><strong>REGON:</strong> 522752730</p>
+                        <dl class="spec spec-compact">
+                            <div class="spec-row">
+                                <dt data-i18n="contact.company_name">Company Name:</dt>
+                                <dd>Dzmitry Danilovich</dd>
+                            </div>
+                            <div class="spec-row">
+                                <dt>NIP (Tax ID):</dt>
+                                <dd>5273013300</dd>
+                            </div>
+                            <div class="spec-row">
+                                <dt>REGON:</dt>
+                                <dd>522752730</dd>
+                            </div>
+                        </dl>
                     </div>
                 </div>
             </div>
