@@ -1,21 +1,12 @@
 export class ThemeManager {
     private themeToggle: HTMLElement | null;
-    private icon: HTMLElement | null;
 
     constructor() {
         this.themeToggle = document.getElementById('theme-toggle');
-        this.icon = this.themeToggle?.querySelector('i') || null;
         this.init();
     }
 
     init() {
-        if (!this.themeToggle || !this.icon) return;
-
-        this.updateIcon(document.documentElement.getAttribute('data-theme') === 'dark');
-        this.setupListeners();
-    }
-
-    setupListeners() {
         if (!this.themeToggle) return;
 
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -30,6 +21,7 @@ export class ThemeManager {
         });
     }
 
+    // The sun/moon icon follows [data-theme] in CSS, so only the attribute changes here.
     setTheme(theme: string, save = true) {
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
@@ -38,12 +30,5 @@ export class ThemeManager {
         }
 
         if (save) localStorage.setItem('theme', theme);
-        this.updateIcon(theme === 'dark');
-    }
-
-    updateIcon(isDark: boolean) {
-        if (this.icon) {
-            this.icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-        }
     }
 }
