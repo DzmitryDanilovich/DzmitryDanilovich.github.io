@@ -41,6 +41,7 @@ export class I18nManager {
             if (key) {
                 const value = this.getTranslation(lang, key);
                 if (value) element.textContent = value;
+                else if (import.meta.env.DEV) console.warn('[i18n] missing', lang, key);
             }
         });
     }
