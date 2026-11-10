@@ -70,11 +70,6 @@ export const translations = {
         },
         footer: {
             rights: "All rights reserved."
-        },
-        cookies: {
-            text: "We use cookies to improve your experience and analyze site traffic.",
-            accept: "Accept",
-            reject: "Reject"
         }
     },
     pl: {
@@ -148,11 +143,6 @@ export const translations = {
         },
         footer: {
             rights: "Wszelkie prawa zastrzeżone."
-        },
-        cookies: {
-            text: "Używamy plików cookie, aby poprawić jakość korzystania z serwisu i analizować ruch na stronie.",
-            accept: "Akceptuj",
-            reject: "Odrzuć"
         }
     }
 };
