@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="og-card">
+<!--
+    Social card source (not part of the build: Vite only bundles index.html).
+    To regenerate public/og-image.png: run `pnpm dev`, open
+    http://localhost:5173/tools/og.html in a 1200x630 viewport and save a screenshot.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <title>Social card</title>
+    <script type="module">import '/assets/css/style.less';</script>
+    <style>
+        /* The class on <html> outranks the site stylesheet, which is injected later. */
+        .og-card,
+        .og-card body {
+            width: 1200px;
+            height: 630px;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        .og-card * {
+            animation: none !important;
+        }
+
+        .og-card .card {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            grid-template-rows: auto 1fr;
+            column-gap: 56px;
+            height: 630px;
+            padding: 56px 64px;
+        }
+
+        .og-card .card-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .og-card h1 {
+            align-self: center;
+            font-size: 4.125rem;
+        }
+
+        /* The site's nameplate, scaled up as one piece */
+        .og-card .plate {
+            grid-column: 2;
+            grid-row: 1 / -1;
+            align-self: center;
+            --spec-label: 6.5rem;
+            width: 360px;
+            zoom: 1.35;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+        <div class="card-brand">
+            <img src="/assets/images/logo-clean.svg" alt="" width="56" height="56">
+            <span>Dzmitry Danilovich</span>
+        </div>
+        <h1>Senior full-stack developer and tech lead for energy and industrial software</h1>
+        <aside class="plate">
+            <dl class="spec spec-compact">
+                <div class="spec-row">
+                    <dt>Experience</dt>
+                    <dd>10+ years</dd>
+                </div>
+                <div class="spec-row">
+                    <dt>Core stack</dt>
+                    <dd>.NET, React, TypeScript</dd>
+                </div>
+                <div class="spec-row">
+                    <dt>Based in</dt>
+                    <dd>Warsaw, Poland</dd>
+                </div>
+            </dl>
+            <p class="status">
+                <span class="lamp"></span>
+                <span>Available for B2B contracts</span>
+            </p>
+        </aside>
+    </main>
+</body>
+
+</html>
