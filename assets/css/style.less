@@ -723,16 +723,23 @@ a {
     gap: 40px;
 
     @media (min-width: 760px) {
-        grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         column-gap: 48px;
     }
+}
+
+.contact-main {
+    container-type: inline-size;
 }
 
 .email-link {
     display: inline-block;
     margin: 20px 0 8px;
     font-family: var(--font-display);
+    /* Sized from its own column (cqi) so the address stays on one line at any
+       width; the viewport-based line is the fallback for older browsers. */
     font-size: clamp(1.25rem, calc(0.6rem + 3.4vw), 1.75rem);
+    font-size: clamp(1.125rem, 7.4cqi, 1.75rem);
     font-weight: 600;
     line-height: 1.2;
     overflow-wrap: anywhere;
@@ -755,7 +762,13 @@ a {
 }
 
 .business {
-    --spec-label: 8rem;
+    --spec-label: 6rem;
+    --spec-gap: 12px;
+
+    @media (min-width: 480px) {
+        --spec-label: 6.75rem;
+        --spec-gap: 16px;
+    }
 }
 
 /* Footer */
