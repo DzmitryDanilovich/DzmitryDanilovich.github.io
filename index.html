@@ -25,21 +25,28 @@
 </head>
 
 <body>
-    <div class="parallax-container">
-        <div class="parallax-layer layer-light"></div>
-        <div class="parallax-layer layer-dark"></div>
-    </div>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <img src="assets/images/logo-128.png" alt="Dzmitry Danilovich Logo" class="logo-img">
-                Dzmitry Danilovich
-            </div>
-            <nav class="navbar">
+            <a class="brand" href="#home">
+                <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="36"
+                    height="36" aria-hidden="true">
+                    <path fill="currentColor" d="M 0.00 0.00 L 1024.00 0.00 L 1024.00 1024.00 L 0.00 1024.00 Z" />
+                    <path class="mark-glyph"
+                        d="M 332.43 685.98 C321.20,685.06 311.91,678.31 309.14,669.08 C308.31,666.29 308.01,623.47 308.02,509.88 C308.04,360.65 308.12,354.34 309.90,350.50 C312.20,345.55 317.23,340.67 322.50,338.30 C326.19,336.64 331.26,336.48 387.26,336.21 L 448.03 335.93 L 447.76 365.71 L 447.50 395.50 L 408.75 395.76 L 370.00 396.02 L 370.00 511.01 L 370.00 626.00 L 408.34 626.00 C443.34,626.00 447.17,625.84 452.18,624.11 C460.60,621.21 463.94,619.19 470.20,613.22 C477.18,606.57 481.09,600.63 484.16,592.00 C486.40,585.71 486.49,584.16 486.99,544.00 L 487.50 502.50 L 518.25 532.98 L 549.00 563.46 L 549.00 574.12 C549.00,625.83 509.89,673.10 457.52,684.68 C451.70,685.96 441.02,686.26 395.00,686.39 C364.48,686.49 336.32,686.30 332.43,685.98 ZM 532.00 686.24 C532.00,685.83 545.39,672.13 561.75,655.80 L 591.50 626.11 L 610.00 625.81 C628.25,625.50 628.58,625.46 634.50,622.51 C642.01,618.77 649.95,610.84 653.55,603.49 C655.99,598.50 656.39,596.26 657.06,583.68 C657.47,575.88 657.74,536.65 657.65,496.50 C657.48,416.39 657.82,420.84 651.30,411.61 C647.42,406.12 641.68,401.83 634.14,398.79 C628.65,396.57 627.43,396.50 588.75,396.20 L 549.00 395.89 L 549.00 446.95 C549.00,475.03 548.66,498.00 548.24,498.00 C547.83,498.00 533.88,484.38 517.24,467.74 L 487.00 437.49 L 487.01 397.49 C487.02,357.71 487.03,357.47 489.35,352.49 C492.03,346.74 497.39,341.64 503.95,338.61 C508.38,336.55 510.00,336.49 566.00,336.18 C637.18,335.78 644.45,336.50 664.62,345.94 C692.51,359.01 709.63,380.62 717.73,413.00 C719.15,418.69 719.40,430.28 719.74,505.50 C720.15,597.20 720.01,600.51 715.29,615.48 C710.58,630.42 703.41,642.35 691.75,654.63 C673.90,673.41 651.67,684.07 626.22,686.04 C612.05,687.14 532.00,687.31 532.00,686.24 Z" />
+                </svg>
+                <span class="brand-name">Dzmitry Danilovich</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-panel"
+                aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="nav-panel" class="nav-panel" aria-label="Main">
                 <ul class="nav-links">
-                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
-                    <li><a href="#about" data-i18n="nav.about">Profile</a></li>
                     <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#about" data-i18n="nav.about">Profile</a></li>
                     <li><a href="#techstack" data-i18n="nav.techstack">Tech Stack</a></li>
                     <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                 </ul>
@@ -48,27 +55,23 @@
                     <span class="divider">|</span>
                     <button class="lang-btn" data-lang="pl">PL</button>
                 </div>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                    <i class="fas fa-moon"></i>
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+                    <svg class="icon icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc. --><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256S114.6 512 256 512c68.8 0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9 .4-9.8 .6-14.8 .6-101.6 0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4S322.6 8.5 312.7 6.3C294.4 2.2 275.4 0 256 0z"/></svg>
+                    <svg class="icon icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" aria-hidden="true"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc. --><path fill="currentColor" d="M178.2-10.1c7.4-3.1 15.8-2.2 22.5 2.2l87.8 58.2 87.8-58.2c6.7-4.4 15.1-5.2 22.5-2.2S411.4-.5 413 7.3l20.9 103.2 103.2 20.9c7.8 1.6 14.4 7 17.4 14.3s2.2 15.8-2.2 22.5l-58.2 87.8 58.2 87.8c4.4 6.7 5.2 15.1 2.2 22.5s-9.6 12.8-17.4 14.3L433.8 401.4 413 504.7c-1.6 7.8-7 14.4-14.3 17.4s-15.8 2.2-22.5-2.2l-87.8-58.2-87.8 58.2c-6.7 4.4-15.1 5.2-22.5 2.2s-12.8-9.6-14.3-17.4L143 401.4 39.7 380.5c-7.8-1.6-14.4-7-17.4-14.3s-2.2-15.8 2.2-22.5L82.7 256 24.5 168.2c-4.4-6.7-5.2-15.1-2.2-22.5s9.6-12.8 17.4-14.3L143 110.6 163.9 7.3c1.6-7.8 7-14.4 14.3-17.4zM207.6 256a80.4 80.4 0 1 1 160.8 0 80.4 80.4 0 1 1 -160.8 0zm208.8 0a128.4 128.4 0 1 0 -256.8 0 128.4 128.4 0 1 0 256.8 0z"/></svg>
                 </button>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section id="home" class="hero">
-            <div class="container hero-content">
-                <h1 data-i18n="hero.title">Senior Full-Stack Developer & Tech Lead</h1>
-                <p class="subtitle" data-i18n="hero.subtitle">Building robust enterprise applications and providing
+            <div class="container">
+                <h1 data-i18n="hero.title">Senior Full-Stack Developer &amp; Tech Lead</h1>
+                <p class="lead" data-i18n="hero.subtitle">Building robust enterprise applications and providing
                     technical leadership for complex, long-term products. Full-stack, full-cycle development services.
                     B2B cooperation from Warsaw, Poland.</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Discuss Your Project</a>
+                <div class="actions">
+                    <a href="#contact" class="btn-primary" data-i18n="hero.cta">Discuss Your Project</a>
                 </div>
             </div>
         </section>
@@ -96,9 +99,10 @@
                     </div>
                     <div class="about-badge">
                         <a href="https://www.credly.com/badges/9c1a0baa-0e7f-4d86-97f1-602ca0cb815d/public_url"
-                            target="_blank">
+                            target="_blank" rel="noopener">
                             <img src="https://images.credly.com/size/340x340/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
-                                alt="AWS Certified Developer - Associate Badge">
+                                alt="AWS Certified Developer - Associate Badge" width="120" height="120"
+                                loading="lazy" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -110,43 +114,36 @@
                 <h2 class="section-title" data-i18n="services.title">Services</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-code"></i></div>
                         <h3 data-i18n="services.fullstack.title">Full-Stack Development</h3>
                         <p data-i18n="services.fullstack.desc">End-to-end application development using .NET and React.
                             From REST APIs and database design to responsive, modern frontends.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-users-cog"></i></div>
                         <h3 data-i18n="services.leadership.title">Technical Leadership</h3>
                         <p data-i18n="services.leadership.desc">Team coordination, requirements analysis with
                             stakeholders, technical decision-making, code reviews, and mentoring developers.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                        <h3 data-i18n="services.devops.title">Build & DevOps</h3>
+                        <h3 data-i18n="services.devops.title">Build &amp; DevOps</h3>
                         <p data-i18n="services.devops.desc">CI/CD pipeline configuration, build optimization,
                             migrations, and quality gates setup with SonarQube.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-user-plus"></i></div>
                         <h3 data-i18n="services.augmentation.title">Team Augmentation</h3>
                         <p data-i18n="services.augmentation.desc">Seamless integration into existing teams. Long-term
                             B2B contracts with full commitment to your product and processes.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-search"></i></div>
                         <h3 data-i18n="services.consulting.title">Technical Consulting</h3>
                         <p data-i18n="services.consulting.desc">Architecture reviews, technical investigations, process
                             improvements, and knowledge sharing sessions for your team.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <h3 data-i18n="services.onboarding.title">Onboarding & Knowledge Transfer</h3>
+                        <h3 data-i18n="services.onboarding.title">Onboarding &amp; Knowledge Transfer</h3>
                         <p data-i18n="services.onboarding.desc">Developer onboarding programs, documentation, and
                             training sessions to accelerate team productivity.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-robot"></i></div>
                         <h3 data-i18n="services.ai.title">AI-Augmented Development</h3>
                         <p data-i18n="services.ai.desc">Leveraging AI coding assistants to boost productivity. Best
                             practices for AI-assisted workflows.</p>
@@ -160,7 +157,7 @@
                 <h2 class="section-title" data-i18n="techstack.title">Technology Stack</h2>
                 <div class="techstack-grid">
                     <div class="techstack-category">
-                        <h3><i class="fas fa-server"></i> <span data-i18n="techstack.backend">Backend</span></h3>
+                        <h3 data-i18n="techstack.backend">Backend</h3>
                         <div class="tech-tags">
                             <span class="tech-tag">ASP.NET Core</span>
                             <span class="tech-tag">Web API</span>
@@ -174,7 +171,7 @@
                         </div>
                     </div>
                     <div class="techstack-category">
-                        <h3><i class="fas fa-laptop-code"></i> <span data-i18n="techstack.frontend">Frontend</span></h3>
+                        <h3 data-i18n="techstack.frontend">Frontend</h3>
                         <div class="tech-tags">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Next.js</span>
@@ -190,7 +187,7 @@
                         </div>
                     </div>
                     <div class="techstack-category">
-                        <h3><i class="fas fa-tools"></i> <span data-i18n="techstack.tooling">Build & Tooling</span></h3>
+                        <h3 data-i18n="techstack.tooling">Build &amp; Tooling</h3>
                         <div class="tech-tags">
                             <span class="tech-tag">RSBuild</span>
                             <span class="tech-tag">Vite</span>
@@ -204,7 +201,7 @@
                         </div>
                     </div>
                     <div class="techstack-category">
-                        <h3><i class="fas fa-cloud"></i> <span data-i18n="techstack.devops">DevOps & Cloud</span></h3>
+                        <h3 data-i18n="techstack.devops">DevOps &amp; Cloud</h3>
                         <div class="tech-tags">
                             <span class="tech-tag">GitHub Actions</span>
                             <span class="tech-tag">TeamCity</span>
@@ -213,7 +210,7 @@
                         </div>
                     </div>
                     <div class="techstack-category">
-                        <h3><i class="fas fa-robot"></i> <span data-i18n="techstack.ai">AI & Productivity</span></h3>
+                        <h3 data-i18n="techstack.ai">AI &amp; Productivity</h3>
                         <div class="tech-tags">
                             <span class="tech-tag">GitHub Copilot</span>
                             <span class="tech-tag">Codex</span>
@@ -237,17 +234,17 @@
                             technical consulting. Let's discuss how I can contribute to your project.</p>
 
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc. --><path fill="currentColor" d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"/></svg>
                             <a href="mailto:contact@DzmitryDanilovich.dev">contact@DzmitryDanilovich.dev</a>
                         </div>
                         <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://linkedin.com/in/dd221x0/" target="_blank"
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc. --><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"/></svg>
+                            <a href="https://linkedin.com/in/dd221x0/" target="_blank" rel="noopener"
                                 data-i18n="contact.linkedin">LinkedIn Profile</a>
                         </div>
                         <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/DzmitryDanilovich" target="_blank"
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc. --><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM252.8 8c-138.7 0-244.8 105.3-244.8 244 0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1 100-33.2 167.8-128.1 167.8-239 0-138.7-112.5-244-251.2-244zM105.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                            <a href="https://github.com/DzmitryDanilovich" target="_blank" rel="noopener"
                                 data-i18n="contact.github">GitHub Profile</a>
                         </div>
                     </div>
