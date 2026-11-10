@@ -6,6 +6,9 @@ export default defineConfig({
   base: '/',
   plugins: [
     ViteImageOptimizer({
+      // Raster images only: optimizing SVG needs the optional `svgo` package,
+      // and the one SVG in the build (the favicon) is already under 2 kB.
+      test: /\.(jpe?g|png|webp)$/i,
       png: {
         quality: 80,
       },
