@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+    <!-- Browser-tab icon: the mark from logo-mark-black.svg with a 1px margin at 16px, so the DD still reads in a tab.
+         Colours are the site's bg and ink tokens. Dark is the default; the media query switches to light, so the
+         file follows the system scheme by itself. theme.ts and tools/icons.mjs pin that query to force one variant. -->
+    <style>
+        @media (prefers-color-scheme: light) {
+            .tile { fill: #EEF0F2 }
+            .mark { fill: #14181C }
+        }
+    </style>
+    <rect class="tile" width="480" height="480" fill="#161B20" />
+    <path class="mark" fill="#E8ECEF" transform="translate(32 64)" d="M136 0V64H64V288H136A40 40 0 0 0 176 248V160.57L240 224.57V248A104 104 0 0 1 136 352H24A24 24 0 0 1 0 328V24A24 24 0 0 1 24 0Z
+        M200 0H312A104 104 0 0 1 416 104V248A104 104 0 0 1 312 352H224L288 288H312A40 40 0 0 0 352 248V104A40 40 0 0 0 312 64H240V168L176 104V24A24 24 0 0 1 200 0Z" />
+</svg>
